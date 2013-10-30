@@ -9,14 +9,11 @@ var fs = require('fs'),
     configPath;
 
 // set our color based on environment
-if (env === 'dev') {
-    color = 'red';
-} else if (env === 'test') {
-    color = 'yellow';
-} else if (env === 'production') {
-    color = 'green';
-} else {
-    color = 'blue';
+switch (env) {
+    case 'dev':         color = 'red'; break;
+    case 'test':        color = 'yellow'; break;
+    case 'production':  color = 'green'; break;
+    default:            color = 'blue'; break;
 }
 
 // color
