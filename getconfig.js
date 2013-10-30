@@ -22,7 +22,7 @@ function c(str, color) {
 }
 
 // build a file path to the config
-configPath = (require.main ? path.dirname(require.main.filename) : ".") + path.sep + env + '_config.json';
+configPath = __dirname.split('node_modules')[0] + env + '_config.json';
 
 // try to read it
 try {
